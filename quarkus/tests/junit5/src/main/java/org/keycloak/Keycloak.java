@@ -24,6 +24,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.TimeoutException;
 
 import io.quarkus.bootstrap.forkjoin.QuarkusForkJoinWorkerThreadFactory;
@@ -109,6 +110,7 @@ public class Keycloak {
         }
 
         public Keycloak start(List<String> rawArgs) {
+            Locale.setDefault(Locale.ENGLISH);
             if (homeDir == null) {
                 homeDir = Platform.getPlatform().getTmpDirectory().toPath();
             }
