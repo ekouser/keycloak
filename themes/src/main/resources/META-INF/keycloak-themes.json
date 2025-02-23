@@ -8,5 +8,8 @@
     }, {
         "name" : "keycloak.v2",
         "types": [ "login" ]
+    }, {
+        "name" : "takbis",
+        "types": [ "login", "common", "email", "welcome"  ]
     }]
 }
